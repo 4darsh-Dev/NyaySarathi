@@ -90,6 +90,14 @@ body{
 
 }
 
+.message-sent{
+    box-shadow: 0 0 25px gray;
+    border-radius: 6px;
+    padding: 8px;
+
+}
+
+
 .bot-message p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -124,6 +132,9 @@ body{
 
 .message-list{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     
 }
 .user-box{
@@ -195,3 +206,36 @@ footer{
     display: none;
 
 }
+
+@media only screen and (max-width:900px) and (min-width:480px){
+    .main-chat{
+        gap: 1rem;
+
+    }
+
+
+}
+
+
+@media only screen and (max-width:390px) and (min-width:280px){
+    .main-chat{
+        gap: 1rem;
+
+    }
+    .chat-img-box{
+        display: none;
+
+
+    }
+
+    .chat-box{
+        width: 100%;
+        padding: 0 20px;
+
+
+    }
+
+
+
+}
+

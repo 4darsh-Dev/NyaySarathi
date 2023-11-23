@@ -339,11 +339,25 @@ nav li [class="nav-btn"]:hover {
 
 #about {
     width: calc(100%-8rem);
-    padding: 4rem 4rem 6rem 4rem;
-    background-color: var(--deep-pink);
+    padding: 0;
+    /* background-color: var(--deep-pink); */
     height: auto;
 
 }
+
+.maintain{
+    display: inline-flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintain img{
+    width: 50%;
+
+}
+
 
 .about h2 {
     font-family: var(--font-head);

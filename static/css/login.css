@@ -161,3 +161,17 @@
     margin-left: -1px;
 
 }
+
+@media only screen and (max-width:480px) and (min-width:280px){
+    .sub-c{
+        width: auto;
+        margin: 0;
+    }
+    .sub-c-1{
+        width: auto;
+        margin: 40px 12px;
+
+    }
+
+    
+}
