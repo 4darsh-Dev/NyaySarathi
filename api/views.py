@@ -10,13 +10,13 @@ from .models import Chat
 import json
 import openai
 import requests
-# from django.conf import settings 
+from django.conf import settings 
 
 # Create your views here.
 
 
 
-openai.api_key_path = "F:/backup-kali/codeFiles/projects/NyaySarathi/.env"
+openai.api_key = settings.OPENAI_API_KEY
 
 # By chat-gpt needs modification for further usage 
 def get_vidura_response(user_message):
@@ -24,7 +24,7 @@ def get_vidura_response(user_message):
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
         messages = [
-            {"role": "system", "content":"You are an helpful Legal Assistant who has knowledge of Constitution of India along with that, you have read all the books regarding Legal "},
+            {"role": "system", "content":"You are an helpful Legal Assistant similar to a profiessional lawyer who has knowledge of Constitution of India, you have read all the books regarding Legal and respond with schedules of Indian Constitution simply what laws I can use as a citizen .. "},
             {"role": "user", "content": user_message},
         ]
     )
@@ -48,5 +48,7 @@ def vidura(request):
         return render(request, "vidura.html", {"chats": chats})
     
     return render(request, "vidura.html", {"chats" : chats })
+
+
 
 
