@@ -12,6 +12,8 @@ Install my-project with github
 git clone https://github.com/4darsh-Dev/NyaySarathi.git
 cd NyaySarathi
 pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
 ```
     
