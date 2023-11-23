@@ -31,8 +31,10 @@ ALLOWED_HOSTS = []
 # APPEND_SLASH = False
 
 # # Accessing api key
-# from decouple import config 
-# OPENAI_API_KEY = config('OPENAI_API_KEY')
+from dotenv import load_dotenv
+
+load_dotenv()
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
 
 
 # Application definition
