@@ -7,12 +7,18 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/services.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 {% endblock head %}
 
 {% block main %}
-    <h1>Hi! Welcome to Services page  </h1>
+<section id="services" class="services content-section">
+    <div class="maintain">
+        <img src="{% static 'img/web-maintain.webp' %}" alt="Website under maintainenance! Please try after one year">
+    </div>
+
+</section>
 {% endblock main %}
 
 {% block script %}

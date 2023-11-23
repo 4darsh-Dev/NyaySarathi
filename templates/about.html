@@ -6,13 +6,14 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 {% endblock head %}
 
 {% block main %}
-    <h1>Hi! Welcome to About page! </h1>
+    <!-- <h1>Hi! Welcome to About page! </h1>
     <section id="about" class="about content-section">
         <h2>About <span>Me</span></h2>
 
@@ -50,6 +51,11 @@
 
 
 
+    </section> -->
+    <section id="about" class="about content-section">
+        <div class="maintain">
+            <img src="{% static 'img/web-maintain.webp' %}" alt="Website under maintainenance! Please try after one year">
+        </div>
     </section>
 {% endblock main %}
 
