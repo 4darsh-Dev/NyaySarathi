@@ -6,10 +6,6 @@ const author = "Adarsh Maurya!";
 console.log(`Developer ${author}`);
 
 
-
-
-
-
   let menuBtnCond = true;
   let checkLabel = document.getElementById("check-label");
   
@@ -30,3 +26,5 @@ console.log(`Developer ${author}`);
   
   let menuBtn = document.getElementById("check");
   menuBtn.addEventListener("click", menuBtnChanger);
+
+  
