@@ -8,6 +8,7 @@
     height: 100vh;
     background: linear-gradient(#35bda4, transparent), linear-gradient(to top left, #1d26ae, transparent), linear-gradient(to top right, #e135be, transparent);
     background-blend-mode: screen;
+    margin: 5.2rem 0;
 
 
 }
