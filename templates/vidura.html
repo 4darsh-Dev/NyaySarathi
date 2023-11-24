@@ -18,7 +18,7 @@
     <div class="container">
 
         {% if user.is_authenticated  %}
-        <div class="user-intro"><b>Welcome, {{user.username}} </b> <a href="/logout">Logout</a></div>
+        <div class="user-intro"><b>Welcome, <span>{{user.username}}</span>  </b> <a href="/logout">Logout</a></div>
         
         {% else %}
             <div class="user-intro"><b>You are not Logged In? Login or Regsiter! </b></div>
