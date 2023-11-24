@@ -36,7 +36,8 @@ body{
     width: auto;
     height: 32px;
     background-color: #fff;
-    margin: 12px 8px;
+    margin: 12px 15px;
+    
 
 
 }
@@ -90,13 +91,45 @@ body{
 
 }
 
-.message-sent{
+.message-text{
     box-shadow: 0 0 25px gray;
     border-radius: 6px;
-    padding: 8px;
+    padding: 10px 12px;
+
+
+}
+.user-intro{
+    padding: 6px 20px;
+    font-family: var(--sans);
+
+}
+.user-intro a{
+    float: right;
+
+}
+.user-intro span{
+    color: var(--deep-pink);
+
+}
+.message-sender{
+    font-family: var(--mono);
+
+}
+.message-sender b{
+    font-size: 18px;
+    color: var(--deep-pink);
+
 
 }
 
+.message-content{
+    font-family: sans-serif, monospace;
+    font-size: 16px;
+    line-height: 24px;
+
+
+
+}
 
 .bot-message p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -139,7 +172,7 @@ body{
 }
 .user-box{
     position: fixed;
-    width: calc(100% - 40px);
+    width: 100%;
     bottom: 0;
     background-color: #ebe7e7;
     height: 80px;
