@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -8,9 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <title>NyaySarathi | {% block title %}{% endblock title %}</title>
-    
+
     {% block head %}
     {% endblock head %}
 
@@ -23,28 +23,30 @@
 
             <nav>
                 <input type="checkbox" id="check">
-            <label id="check-label" for="check" class="checkbtn">
-                <i class='bx bx-menu'></i>
-               
-            </label>
                 <div class="logo">
-                    <h1><a href="/"><img class="logo-img" src="{% static 'img/law-hammer.svg' %}" 
-                        alt="NyaySarathi - Laws made simpler! legal help provider online"><span> NyaySarathi </span></a>
-                <h1>
+                    <a href="/"><img class="logo-img" height="70px" width="75px" src="{% static 'img/logo4.jpg' %}"
+                            alt="NyaySarathi - Laws made simpler! legal help provider online"></a>
+                    <h1 class="font-large">
+                        NyaySarathi
+                    </h1>
                 </div>
                 <ul class=" menu-list">
-                    
-                    <li> <a class="menu-items" href="/">Home</a> </li>
 
-                    <li> <a class="menu-items" href="/about">About</a> </li>
-                    <li> <a class="menu-items" href="/services">Services</a> </li>
-                    <li> <a class="menu-items" href="/contact">Contact</a></li>
-                    
-                    <li> <a  class="menu-items" href="/login">Login</a></li>
-                    <li> <a class="nav-btn" id="nav-signup" href="/signup">Sign Up</a></li>
+                    <li> <a class="menu-items font-normal" href="/">Home</a> </li>
+
+                    <li> <a class="menu-items font-normal" href="/about">About</a> </li>
+                    <li> <a class="menu-items font-normal" href="/services">Services</a> </li>
+                    <li> <a class="menu-items font-normal" href="/contact">Contact</a></li>
+
+                    <li> <a class="menu-items font-normal font-we-medium  btn-border" href="/login">Login</a></li>
+                    <li> <a class="btn font-normal" id="nav-signup" href="/signup">Sign Up</a></li>
 
 
                 </ul>
+                <label id="check-label" for="check" class="checkbtn">
+                    <img src="{%static 'img/hamburger-icon.png'  %}" alt="">
+
+                </label>
             </nav>
         </section>
     </header>
@@ -55,34 +57,41 @@
         {% endblock main %}
     </main>
 
-    
+
 
     <footer>
         <div class="last-new">
-
-            <p>Get access to exclusive update...</p>
-
-            <div class="subscription-box">
-                <input id="subscription" placeholder="youremail.com" required type="email">
-                <a target="_blank" href="mailto:adarsh@onionreads.com">Subscribe</a>
+            <div>
+                <p>Get access to exclusive update...</p>
+                <span class="subscription-box">
+                    <input id="subscription" placeholder="youremail.com" required type="email">
+                    <a target="_blank" href="mailto:jyoti@onionreads.com">Subscribe</a>
+                </span>
             </div>
-
-
-
-
-
-        </div>
-
-        <div class="last-text ">
-
-            <p class="font-ss">Designed & Developed with <i id="heart" class=' bx bxs-heart'></i> Love by <span><a
-                        class="ad-link" target="_blank" href="https://adarshmaurya.onionreads.com/">Solve-Ease</a></span> &copy; 2023
-            </p>
-        </div>
+            <span class="contact-links">
+                <a target="_blank" href="#"><i class='bx bxl-linkedin'></i></a>
+    
+                <a target="_blank" href="https://www.instagram.com/its_peachpie/"><i class='bx bxl-instagram'></i></a>
+    
+                <a target="_blank" href="#"><i class='bx bxl-youtube'></i></a>
+    
+                <a target="_blank" href="#"><i class='bx bxl-facebook'></i></a>
+    
+                <a target="_blank" href="#"><i class='bx bxl-twitter'></i></a>
+    
+    
+    
+            </span>
+            <span>
+                <p class="font-ss">Designed & Developed with <i id="heart" class=' bx bxs-heart'></i> Love by <span><a
+                            class="ad-link" href="https://adarshmaurya.onionreads.com/">Solve-Ease</a></span> &copy;
+                    2023
+                </p>
+            </span>
     </footer>
 
     {% block script %}
-    
+
     {% endblock script %}
 
 
