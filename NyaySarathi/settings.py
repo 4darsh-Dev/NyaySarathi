@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#3#l=qlv2449+zlk^fpi#yrr_7!rybb*hzv%m(_7yamue-+)od
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", ]
 
 # Appending slash
 # APPEND_SLASH = False
@@ -35,6 +35,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
+NYAYDB_KEY = os.getenv('NYAYDB_KEY', ' ')
 
 
 # Application definition
@@ -89,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nyaysarathidb',
         'USER': 'root',
-        'PASSWORD': 'Srmzxv@701121',
+        'PASSWORD':NYAYDB_KEY  ,
         'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
         'PORT': '3306',      # or the port on which your MySQL server is listening
     }
