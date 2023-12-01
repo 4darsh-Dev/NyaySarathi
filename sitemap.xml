@@ -1,0 +1,35 @@
+<urlset>
+<url>
+<loc>http://www.nyaysarathi.co</loc>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://nyaysarathi.co/about/</loc>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://nyaysarathi.co/contact/</loc>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://nyaysarathi.co/services/</loc>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://nyaysarathi.co/login/</loc>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>http://nyaysarathi.co/signup/</loc>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>
+http://nyaysarathi.co/static/img/nyaySarathiHome.webp
+</loc>
+</url>
+
+
+<!-- Add URLs of blog posts dynamically -->
+<!-- Add URLs of other pages or resources -->
+</urlset>
