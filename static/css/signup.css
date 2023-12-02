@@ -6,20 +6,21 @@
 
 
 .mainContainer{
-    width:100vw;
-    height: 100vh;
-    background: linear-gradient(#35bda4, transparent), linear-gradient(to top left, #1d26ae, transparent), linear-gradient(to top right, #e135be, transparent);
-    background-blend-mode: screen;
+    width:100%;
+    height: auto;
+    
     margin: 5.2rem 0;
 
 
 }
 .mc-div{
-    width:100vw;
-    height: 100vh;
+    width:calc(100%-80px);
+    padding: 2rem 40px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15%;
 
 }
 .error-message{
@@ -40,19 +41,31 @@
     margin: 6px;
 
 }
+
+.signup-img-box{
+    
+    width: 40%;
+
+
+}
+.signup-img-box img{
+    width: 100%;
+
+}
+
 .sub-c{
-    width: 420px;
-    height: 500px;
+    width: 35%;
+    height: 450px;
     background-color: white;
     color: black;
     border: 2px solid white;
-
+    box-shadow: 0 0 25px gray;
     border-radius: 9px;
     
     
 }
 .sub-c-1{
-    width: 342px;
+    width: auto;
     height: auto;
     /* background-color: salmon; */
     margin: 20px 40px 20px 40px;
@@ -102,7 +115,7 @@
     font-family: sans-serif;
     font-size: 13px;
     /* display: inline-block; */
-    color: rgb(93, 23, 158);
+    color:var(--black);
     float: right;
     text-decoration: none;
     position: relative;
@@ -120,11 +133,11 @@
 .signup-btn{
     font-size: 16px;
     width: 340px;
-    background-color: #157ad8;
+    background-color:var(--deep-pink);
     height: 40px;
     color: white;
     font-weight: 600;
-    border: 2px solid #157ad8;
+    border: 2px solid var(--deep-pink);
     border-radius: 25px;
     position: relative;
     top: 12px;
@@ -132,7 +145,9 @@
 }
 .signup-btn:hover{
     cursor: pointer;
-    background-color: #1068b9;
+    background-color: var(--deep-pink);
+    box-shadow: 0 0 25px var(--deep-pink);
+
 }
 .login{
     width:  100%;
@@ -152,7 +167,7 @@
 }
 .login span a:hover{
     text-decoration: underline;
-    color: #1068b9;
+    color: var(--black);
     font-weight: 600;
 }
 
@@ -169,19 +184,54 @@
     flex-direction: row;
 
 }
+@media only screen and (max-width:1020px) and (min-width:800px){
+    .mc-div{
+        padding: 4rem 20px;
+        gap:5%;
+    }
+    .sub-c{
+        width: 45%;
+        margin: 0;
+    }
+    .sub-c-1{
+        width: auto;
+        margin: 40px 20px;
+
+    }
+    .form-f{
+        width: 300px;
+
+    }
+    .signup-btn{
+        width: 300px;
+
+    }
+    .signup-img-box{
+        width: 45%;
+
+    }
+
+    
+}
+
+
 
 @media only screen and (max-width:480px) and (min-width:280px){
+    .mc-div{
+        padding: 2rem 12px;
+        gap: 0%;
+
+    }
     .sub-c{
         width: auto;
         margin: 0;
-        height: 550px;
-        
     }
     .sub-c-1{
         width: auto;
         margin: 40px 12px;
 
     }
+
 
     
 }
