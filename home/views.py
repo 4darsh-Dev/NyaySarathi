@@ -9,6 +9,8 @@ from django.contrib.auth import authenticate,login, logout
 from django.contrib import messages
 from django.http import HttpResponse
 
+from home.models import Contact
+
 # Create your views here.
 
 def index(request):
@@ -21,6 +23,28 @@ def services(request):
     return render(request, "services.html")
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        description = request.POST.get('description')
+
+        # check for erroneous parameters
+        if len(description) < 5:
+            error_msg1 = "Message cannot be Empty! Try again."
+            messages.error(request,error_msg1 )
+            return render(request, 'contact.html', {"error_message" : error_msg1})
+
+
+        # saving the values in the Db
+        contact = Contact(name=name, email=email, phone=phone, description=description)
+        contact.save()
+
+        # On successfully submitting the form
+        success_msg = "Your response recorded Successfully!"
+        messages.success(request, success_msg )
+        return render(request, 'contact.html', {"error_message" : success_msg})
+
     return render(request, "contact.html")
 
 
@@ -63,6 +87,12 @@ def signupUser(request):
         # check for erroneous parameters
         if len(username) > 10:
             error_msg1 = "username must be under 10 characters."
+            messages.error(request,error_msg1 )
+            return render(request, 'signup.html', {"error_message" : error_msg1})
+        
+
+        if len(pass1) < 8:
+            error_msg1 = "password must be under 8 characters."
             messages.error(request,error_msg1 )
             return render(request, 'signup.html', {"error_message" : error_msg1})
 
