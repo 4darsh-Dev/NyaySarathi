@@ -8,7 +8,6 @@
     height: auto;
     margin-top: 6rem;
     
-
 }
 
 .error-message{
@@ -268,7 +267,10 @@ footer{
 
 
     }
-
+    .mess-fm input{
+        width: 75vw;
+        
+    }
 
 
 }
