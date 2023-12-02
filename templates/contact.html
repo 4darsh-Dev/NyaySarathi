@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 
 {% load static %}
@@ -15,8 +14,20 @@
 {% block main %}
 
 <section class="home" id="home">
+    
     <div class="c-container">
-       
+        {% if error_message %}
+    <div  id="error-message" class="error-message">
+        <p> {{ error_message }} </p>
+        <div id="cross-btn" class="cross-btn">
+            <i class='bx bx-x '></i>
+        </div>
+    </div>
+
+    {% endif %}
+
+        <div class="c-container-sub">
+
             <div class="contact-img-box">
                 <img src="{% static 'img/contact-img.jpeg' %}" alt="Contact ">
     
@@ -24,30 +35,96 @@
             <div class="about-text">
                 <h1>Contact Us </h1>
                 <h2>Justice is not a privilege but a Fundamental Right.</h2>
-                <p>A platform dedicated to spread legal awareness and making justice accessible to everyone irrespective of their background and education status. Vidura Chatbot respond to user queries related to legal topics in simple and understandable manner with mutlilingual support and voice input. </p>
-                <a target="_blank" href="https://adarshmaurya.onionreads.com/" class="btn-box font-ss">Protfolio <i class='bx bx-right-arrow-alt'></i> </a>
-
+                <p>A platform dedicated to spread legal awareness and making justice accessible to everyone irrespective of
+                    their background and education status. Vidura Chatbot respond to user queries related to legal topics in
+                    simple and understandable manner with mutlilingual support and voice input. </p>
+                <a target="_blank" href="https://adarshmaurya.onionreads.com/" class="btn-box font-ss">Protfolio <i
+                        class='bx bx-right-arrow-alt'></i> </a>
+    
                 <div class="contact-links">
                     <a target="_blank" href="https://www.linkedin.com/in/adarsh-maurya-dev/"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/4darsh-Dev" target="_blank"><i class='bx bxl-github'></i></a>
-                <a target="_blank" href="https://www.facebook.com/people/Onion-Reads/100089856034775"><i
-                        class='bx bxl-facebook'></i></a>
-                <a target="_blank" href="https://www.instagram.com/its_onionreads/"><i class='bx bxl-instagram'></i></a>
-                <a target="_blank" href="https://twitter.com/4darsh_Dev"><i class='bx bxl-twitter'></i></a>
-            
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/4darsh-Dev" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.facebook.com/people/Onion-Reads/100089856034775"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a target="_blank" href="https://www.instagram.com/its_onionreads/"><i class='bx bxl-instagram'></i></a>
+                    <a target="_blank" href="https://twitter.com/4darsh_Dev"><i class='bx bxl-twitter'></i></a>
+    
                 </div>
     
             </div>
 
-           
-            
-    
-      
+        </div>
+
         
+
     </div>
 
-    
+    <div class="contact-fm">
+
+        <div class="phone-img-box">
+            <img src="{% static 'img/phone-img.webp' %}" alt="Contact Image NyaySarathi | Guide to simpler laws, vidura chatbot online legal help">
+        </div>
+
+        <div class="sub-c">
+
+            <div class="sub-c-1">
+                <h1 class="head">Contact Form</h1>
+                <div class="form">
+                    <form id="my-form" method="post" action="/contact/">
+                        {% csrf_token %}
+
+                        <div class="form-c-1">
+                            <label class="sub-head" for="name">
+                                Name
+                            </label>
+
+                            <i class='bx bxs-user input-img'></i>
+                            <input class="form-f" id="name" required
+                                placeholder="Your Name" name="name" type="text">
+
+                        </div>
+                        <div class="form-c-1">
+                            <label class="sub-head" for="email">
+                                Email
+                            </label>
+
+                            <i class='bx bxs-envelope input-img'></i>
+                            <input class="form-f" name="email" id="email" required
+                                placeholder="example@gmail.com" type="email">
+
+                        </div>
+                        <div class="form-c-1">
+                            <label class="sub-head" for="phone-number">
+                                Phone
+                            </label>
+
+                            <i class='bx bxs-phone input-img' ></i>
+                            <input class="form-f" name="phone" id="phone-number"
+                                placeholder="+91-012345xxxx" type="text">
+
+                        </div>
+                        <div class="form-c-1">
+                            <label class="sub-head" for="description">
+                                Description
+                            </label>
+                            <textarea class="form-f" name="description" required placeholder="How can we help you?" name="description"  id="description" cols="30" rows="10"></textarea>
+
+                        </div>
+
+                        <div style="font-family: sans-serif;font-size: 16px;" class="sign-up">
+                            We do not share your credentials with anyone else.
+                        </div>
+
+                    <button type="submit" id="submit-btn" class="submit-btn">SUBMIT</button>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
 </section>
 
 {% endblock main %}
@@ -55,5 +132,6 @@
 {% block script %}
 
 <script src="{% static 'js/script.js' %}"> </script>
+<script src="{% static 'js/contact.js' %}"> </script>
 
 {% endblock script %}
