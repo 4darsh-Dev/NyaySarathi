@@ -352,8 +352,8 @@ nav li [class="nav-btn"]:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding:6rem 0;
-  
+  margin:6rem 0;
+
 }
 
 .maintain img{

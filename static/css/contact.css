@@ -123,17 +123,7 @@ body{
 
 }
 
-.foot-img{
-    width: calc(100%- 80px);
-    height: 200px;
-    margin: 0;
 
-    background-image: url(/static/img/contact-footer-img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-}
 
 @media only screen and (max-width:480px) and (min-width:280px) {
     .contact-img-box img{
