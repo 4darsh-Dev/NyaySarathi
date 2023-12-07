@@ -1,8 +1,9 @@
-console.log("I am working fine!");
-const AUTHOR = "Adarsh Maurya";
-console.log(`Author ${AUTHOR}`);
+// console.log("I am working fine!");
+// const AUTHOR = "Adarsh Maurya";
+// console.log(`Author ${AUTHOR}`);
 
 // For Error message displaying and closing it 
+
 let crossBtn = document.getElementById("cross-btn");
 let errorMsgElem = document.getElementById("error-message");
 
@@ -52,7 +53,7 @@ messageForm.addEventListener('submit', (event) => {
 
     messageInput.value = '';
 
-    fetch('', {
+    fetch('/vidura/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: new URLSearchParams({
@@ -78,3 +79,22 @@ messageForm.addEventListener('submit', (event) => {
             messagesList.appendChild(messageItem);
         });
 });
+
+
+
+// function mSubmitInput() {
+//     
+//     mForm.submit();
+// }
+
+
+let inputSubmit = document.getElementById("mess-btn");
+inputSubmit.addEventListener("click", function(){
+    let mForm = document.getElementById("chat-form");
+    mForm.submit();
+    console.log("Submitted Successfully!");
+
+})
+
+console.log("Vidura is loadin! ");
+

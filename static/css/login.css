@@ -207,6 +207,11 @@
 
 
 @media only screen and (max-width:480px) and (min-width:280px){
+    .login-img-box{
+        display: none;
+
+    }
+    
     .mc-div{
         padding: 2rem 12px;
         gap: 0%;

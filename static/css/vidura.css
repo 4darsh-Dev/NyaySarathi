@@ -168,7 +168,9 @@ body{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    
+    height: auto;
+    margin-bottom: 8rem;
+
 }
 .user-box{
     position: fixed;
@@ -218,6 +220,7 @@ body{
     align-items: center;
     position: relative;
     left: 12px;
+    border: 0 aliceblue;
 
 
 }
