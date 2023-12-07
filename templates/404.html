@@ -12,11 +12,14 @@
 {% endblock head %}
 
 {% block main %}
-    <div class="notfound-box">
-        <img src="{% static 'img/404.jpg' %}" alt="404" class="notfound-img">
-        <h1> 404 - Page not found!  </h1>
-        <p> The page you are looking for no longer exists !</p>
+<section id="not-found" class="not-found content-section">
+    <div class="maintain">
+        <img src="{% static 'img/page-not-found.webp' %}" alt="Page not found 404, Back to Home, NyaySarathi ">
     </div>
+    <div class="back-home">
+        <a class="home-link" href="/">Back to Home</a>
+    </div>
+</section>
 
 
 {% endblock main %}

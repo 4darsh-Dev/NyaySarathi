@@ -35,6 +35,8 @@
 
 
     {% endif %}
+
+    <div id="cross-btn"></div>
         
         <div class="bot-img">
             <img src="{% static 'img/chatbot.svg' %}" alt="Bot">
@@ -97,9 +99,19 @@
                         <input class="message-input" name="message" id="message" required type="text" placeholder="Enter your message...">
                     </form>
                 </div>
-                <div id="mess-btn" class="mess-btn">
-                    <i class='bx bx-send'></i>
-                </div>
+                <!-- <div id="mess-btn" class="mess-btn">
+                    
+                     <button type="submit" id="input-submit">
+                      <i class='bx bx-send'></i>
+                     </button>
+                      
+                 
+
+                </div> -->
+
+                <button id="mess-btn" class="mess-btn">
+                  <i class='bx bx-send'></i>
+                </button>
 
             </div>
 
@@ -113,4 +125,6 @@
 
 {% block script %}
 <script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/vidura.js' %}"></script>
+
 {% endblock script %}
